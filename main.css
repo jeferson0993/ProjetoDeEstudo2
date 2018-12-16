@@ -1,0 +1,44 @@
+body {
+    margin: 0 auto;
+    width: 960px;
+    background-color: #fff;
+    overflow: scroll;
+    overflow-x: hidden;    
+    background-image: url(imagems/fundo_topo.jpg);
+    background-repeat: repeat-x;    
+}
+#logo_topo {
+    width: 301px;
+    height: 111px;
+    background-color: #000;
+    background-image: url(imagems/logo.png);
+    float: left;
+}
+#menu {
+    width: 660px;
+    height: 100px;
+    background-color: #000;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 0px 0px 260px;
+}
+.botao_menu {
+    text-decoration: none;
+    display: table-cell;
+    width: 100px;
+    height: 30px;
+    margin: 0px;
+    padding: 1px 5px;
+    background-color: #222;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    color: #bbb;
+    font-family: Arial;
+    font-size: 10px;
+    cursor: pointer;
+}
+.botao_menu:hover {
+    background-color: #c22;
+    color:#fff;
+}
