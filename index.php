@@ -10,9 +10,14 @@
 <body>
     <header>
        <?php
-        include "topo.php";
+            include "topo.php";
        ?> 
     </header>
+    <section class="slide">
+        <?php
+            include "slider.html"
+        ?>
+    </section>
 </body>
 <script src="main.js"></script>
 </html>
