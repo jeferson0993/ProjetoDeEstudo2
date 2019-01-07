@@ -23,6 +23,16 @@
             include "buscador.php"
         ?>
     </section>
+    <section id="destaques">
+        <?php
+            include "destaques.html"
+        ?>
+    </section>
+    <footer>
+        <?php
+            include "footer.html"
+        ?>
+    </footer>
 </body>
 <script src="main.js"></script>
 </html>

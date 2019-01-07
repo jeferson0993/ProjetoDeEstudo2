@@ -1,6 +1,8 @@
 * {
     padding: 0;
     margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 body {
     margin: 0 auto;
@@ -109,4 +111,32 @@ label {
     color: #bbb;
     padding: 10px 0 0 0;
     margin: 0 0 10px 0;
+}
+#destaques {
+    display: flex;
+    padding: 15px 0px;
+    height: 80px;    
+}
+.destaques {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    background-color: #000;
+    border-radius: 100%;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+}
+.destaques:hover {
+    background-color: #c22;
+}
+footer {
+    background-color: #222;
+    padding: 10px 20px;
+    margin-top: 30px;    
+    color: #fff;
+    display: flex;
+    justify-content: center;
 }
