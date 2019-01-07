@@ -18,6 +18,11 @@
             include "slider.html"
         ?>
     </section>
+    <section id="buscador">
+        <?php
+            include "buscador.php"
+        ?>
+    </section>
 </body>
 <script src="main.js"></script>
 </html>
