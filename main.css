@@ -6,7 +6,7 @@
 }
 body {
     margin: 0 auto;
-    width: 960px;
+    width: 960px;    
     background-color: #fff;
     overflow: scroll;
     overflow-x: hidden;    
@@ -138,5 +138,31 @@ footer {
     margin-top: 30px;    
     color: #fff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center
+}
+#main {    
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#f_login input[type=text], #f_login input[type=password] {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 15px;
+    color: #888;
+    width: 300px;
+}
+#f_login label {
+    font-size: 20px;
+    color: #888;    
+}
+#f_login input[type=submit] {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
 }
