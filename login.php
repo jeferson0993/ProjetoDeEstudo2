@@ -17,12 +17,19 @@
     <section id="main">
         
         <?php
+
+            include "conexao.inc";
+            
             if (isset($_POST["f_logar"])) {
                 $user=$_POST["f_user"];
                 $senha=$_POST["f_senha"];
 
-                if (($user != "jefinho")or($senha != "123")) {
-                    echo "<script>window.alert('LOGIN INCORRETO')</script>";                    
+                $sql = 'SELECT * FROM login WHERE login="$user" AND senha="$senha";';
+                $res = mysqli_query($con, $sql);
+                //$ret = mysqli_affected_rows($con);
+
+                if ($res == 0) {
+                    echo "<p>" + $res + "</p>";
                 } else {
                     $chave1 = "qwertyuiopasdfghjklzxcvbnm";
                     $chave2 = "QWERTYUIOPASDFGHJKLZXCVBNM";
@@ -41,6 +48,8 @@
                     header("Location:gerenciamento.php?num=$num");
                 }
             }
+
+            mysqli_close($con);
         ?>
 
         <form action="login.php" method="post" name="f_login" id="f_login">
