@@ -12,9 +12,38 @@
        <?php
             include "topo.php";
        ?> 
-    </header>
+    </header>    
+
     <section id="main">
-        <form action="" method="post" name="f_login" id="f_login">
+        
+        <?php
+            if (isset($_POST["f_logar"])) {
+                $user=$_POST["f_user"];
+                $senha=$_POST["f_senha"];
+
+                if (($user != "jefinho")or($senha != "123")) {
+                    echo "<script>window.alert('LOGIN INCORRETO')</script>";                    
+                } else {
+                    $chave1 = "qwertyuiopasdfghjklzxcvbnm";
+                    $chave2 = "QWERTYUIOPASDFGHJKLZXCVBNM";
+                    $chave3 = "1234567890";
+                    $chave = str_shuffle($chave1.$chave2.$chave3);
+                    $tam = strlen($chave);
+                    $num = "";
+                    $qtde = rand(20, 50);
+                    for ($i = 0; $i < $qtde; $i++) { 
+                        $pos = rand(0, $tam);
+                        $num .= substr($chave, $pos, 1);
+                    }
+                    session_start();
+                    $_SESSION['numlogin'] = $num;
+                    $_SESSION['username'] = $user;
+                    header("Location:gerenciamento.php?num=$num");
+                }
+            }
+        ?>
+
+        <form action="login.php" method="post" name="f_login" id="f_login">
             <label for="">Usuário</label>
             <input type="text" name="f_user" id="">
             <label for="">Senha</label>
